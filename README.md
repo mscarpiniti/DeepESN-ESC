@@ -5,4 +5,4 @@ A DeepESN consists in the cascade of several reservoirs whose hidden states are 
 
 The proposed model is based on the TensorFlow implementation of the Deep Reservoir Computing introduced by [Claudio Gallicchio](https://github.com/gallicch/DeepRC-TF) in:
 
-[1] Gallicchio, C., Micheli, A., Pedrelli, L.: Deep reservoir computing: A critical experimental analysis. Neurocomputing 268, 87–99 (2017). https://doi.org/10.1016/j.neucom.2016.12.08924.
+[1] Gallicchio, C., Micheli, A., Pedrelli, L.: Deep reservoir computing: A critical experimental analysis. *Neurocomputing*, Vol. 268, pp. 87–99 (2017). https://doi.org/10.1016/j.neucom.2016.12.08924.
