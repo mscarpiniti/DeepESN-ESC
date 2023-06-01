@@ -1,0 +1,44 @@
+# General settings
+dataset_name: 'cantiere'
+result_path: 'E:/Data/DeepESN/code/Results/CS/'
+seed: 1
+
+# Hyperarameters of the reservoir
+layers: 5
+units: 200
+spectral_radius: 0.9
+leaky: 0.1
+input_scaling: 0.8
+inter_scaling: 0.8
+connectivity_recurrent: 10
+connectivity_input: 10
+connectivity_inter: 10
+concat: True
+return_sequences: False
+
+# Dimensionality reduction hyperparameters
+dimred_method: 'pca'
+n_dim: 80
+
+# Type of readout
+readout_type: 'lin'
+
+# Linear readout hyperparameters
+alpha: 0.5
+
+# kNN readout hyperparameters
+n_neighbors: 5
+
+# SVM readout hyperparameters
+svm_kernel: 'rbf'
+svm_gamma: !!float 5e-3
+svm_C: 10
+
+# MLP readout hyperparameters
+mlp_layout: !!python/tuple [80,20]
+num_epochs: 200
+w_l2: !!float 1e-3
+nonlinearity: 'relu'
+
+# Random Forests hyperparameters
+n_trees: 100
