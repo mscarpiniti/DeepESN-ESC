@@ -99,8 +99,8 @@ def process_audio(file_name, win):
 # ======================================================================
 # Set here the: 
 # - number of frequency bands (freq); 
-# - the number of time windows (time); and,
-# - the size of the windows in miliseconds (win).
+# - number of time windows (time); and,
+# - size of the windows in miliseconds (win).
 freq = 128
 time = 18
 win  = 50
