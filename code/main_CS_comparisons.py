@@ -185,8 +185,8 @@ for l in range(config['layers']):
         tot_time = (time.time() - time_start)
         
         acc  = accuracy_score(Yte, Ypred)
-        # prec = precision_score(Yte, y_pred)
-        # rec  = recall_score(Yte, y_pred)
+        # prec = precision_score(Yte, Ypred, average='weighted')
+        # rec  = recall_score(Yte, Ypred, average='weighted')
         f1 = f1_score(Yte, Ypred, average='weighted')
 
         print('Level: {} -- Model: {}'.format(l+1, name))
