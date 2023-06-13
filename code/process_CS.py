@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+This script is used for data preprocessing. 
+Specifically, it is used for splitting audio files into chunks and to 
+extract the Mel-scale spectrogram from them.
+
 Created on Thu Jun  1 18:11:15 2023
 
-@author: miche
+@author: Michele Scarpiniti -- DIET Dpt., Sapienza University of Rome
 """
 
 import os
@@ -99,8 +103,8 @@ def process_audio(file_name, win):
 # ======================================================================
 # Set here the: 
 # - number of frequency bands (freq); 
-# - number of time windows (time); and,
-# - size of the windows in miliseconds (win).
+# - the number of time windows (time); and,
+# - the size of the windows in miliseconds (win).
 freq = 128
 time = 18
 win  = 50
@@ -144,6 +148,12 @@ def save_np_data_chunked(x, y):
     return [np_data, np_targets]
 
 
+# Split all files into chunks
+def split_data_in_chunks(x, y, win=50):
+    for i in range(len(y)): # all files in csv
+        split_audio_files(audio_dir, x[i], win)
+        
+
 
 # %% Pre-process the CS dataset
 
@@ -158,6 +168,11 @@ print("x train:{0}\ny train:{1}\nx test:{2}\ny test:{3}".format(len(x_train),
                                                                 len(y_train),
                                                                 len(x_test),
                                                                 len(y_test)))
+
+
+# Split all files into chunks
+# split_data_in_chunks(x_train, y_train, win=win)
+# split_data_in_chunks(x_test, y_test, win=win)
 
 
 # Split all files into chunks and get the Mel-Spectrogram
